@@ -1,6 +1,6 @@
 import { useQuery } from '@tanstack/react-query';
 import { supabase } from '@/integrations/supabase/client';
-import { StoreSettings, DeliveryCharges, MetaPixelSettings, PolicySettings } from '@/types';
+import { StoreSettings, DeliveryCharges, MetaPixelSettings, PolicySettings, HomeContent } from '@/types';
 
 export function useSettings() {
   return useQuery({
@@ -22,6 +22,7 @@ export function useSettings() {
         deliveryCharges: settings.delivery_charges as DeliveryCharges | undefined,
         metaPixel: settings.meta_pixel as MetaPixelSettings | undefined,
         policies: settings.policies as PolicySettings | undefined,
+        homepageContent: settings.homepage_content as HomeContent | undefined,
       };
     },
   });
