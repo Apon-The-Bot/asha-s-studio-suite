@@ -126,3 +126,25 @@ export interface PolicySettings {
   return_days: number;
   shipping_info: string;
 }
+
+export interface HeroSlide {
+  id: string;
+  title: string;
+  subtitle: string;
+  cta_text: string;
+  cta_link: string;
+  image_url: string;
+}
+
+export interface Testimonial {
+  id: string;
+  name: string;
+  text: string;
+  rating: number;
+}
+
+export interface HomeContent {
+  hero_slides: HeroSlide[];
+  testimonials: Testimonial[];
+  hero_badge_text: string;
+}

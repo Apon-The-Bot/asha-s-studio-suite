@@ -1,11 +1,12 @@
 import { Navigate, Outlet, Link, useLocation } from 'react-router-dom';
-import { LayoutDashboard, Package, ShoppingCart, FolderTree, Settings, LogOut, Store } from 'lucide-react';
+import { LayoutDashboard, Package, ShoppingCart, FolderTree, Settings, LogOut, Store, Home } from 'lucide-react';
 import { useAuth } from '@/contexts/AuthContext';
 import { Button } from '@/components/ui/button';
 import { Skeleton } from '@/components/ui/skeleton';
 
 const navItems = [
   { label: 'Dashboard', icon: LayoutDashboard, path: '/admin' },
+  { label: 'Home Page', icon: Home, path: '/admin/home-page' },
   { label: 'Products', icon: Package, path: '/admin/products' },
   { label: 'Orders', icon: ShoppingCart, path: '/admin/orders' },
   { label: 'Categories', icon: FolderTree, path: '/admin/categories' },
